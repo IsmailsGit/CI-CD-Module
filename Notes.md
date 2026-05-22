@@ -64,3 +64,38 @@ AWS, Azure, and GCP who also have their native CICD services. Each of these tool
 
 CICD is a vital part of the DevOps process. DevOps cannot live without CICD. 
 
+<img width="460" height="233" alt="image" src="https://github.com/user-attachments/assets/f59196db-648d-44b1-b120-3bc69512eb8f" />
+
+First, you have the continuous integration. Here you have the code, build, and test. In the code section, that basically means developers write code and commit changes frequently to the version control system, such as GitHub, GitLab, Bitbucket, and so on. Then your code is automatically built, ensuring it compiles correctly and all dependencies are in place. Then you have automated tests. These tests are run to verify that your code that has been updated does not introduce any bugs or issues.
+
+
+On the right side, the CD. Based on feedback, the next steps are planned. The successfully tested code is then released onto a staging or a production environment. Then it's deployed. The application is deployed to a production environment which is live, making it available to users. After that, you're monitoring your code.
+
+By using automated pipelines, CICD ensures that the processes are consistent across different environments. It eliminates the "it works on my machine problem" and ensures that the code runs smoothly from development to production.
+
+### How CI/CD fits into the DevOps Architecture
+
+<img width="690" height="387" alt="image" src="https://github.com/user-attachments/assets/35397d25-9c84-4951-a397-b5489e6da13b" />
+
+First you have your source control. This is where developers store and manage their code, tools like GitHub, GitLab, Bitbucket, and much more that are commonly used for this purpose. Source control allows multiple developers to work on the same project without conflicts, maintaining a history of changes and allowing for collaboration.
+
+Then you have the CI/CD. Once the code is in your source control, we move to the CI/CD stage. Here, CI/CD automates the build, test, and deployment process. This stage, like we said, ensures that your code changes are continuously integrated, tested, and deployed.
+
+Then after that, you have the monitoring and logging. Now, after your code is deployed, you need to monitor something. This is where monitoring and logging come into play. This stage involves continuously monitoring the application to ensure it runs smoothly. Tools like Prometheus, Grafana, and ELK are used to help track the performance of your code to find any issues and log important events. This feedback loop is crucial for maintaining and improving the application over time.
+
+You can go back and forth between these stages. For example, you might find an error in your logs and you want to go back and fix your CI/CD or your code and then downwards.
+
+To summarize, you have your source control where you manage and store code. Then you have CI/CD where you automate integration, testing, and deployment of code. And then you have the monitoring and logging. This ensures the applications run smoothly.
+
+
+
+
+
+
+
+
+
+
+
+
+
