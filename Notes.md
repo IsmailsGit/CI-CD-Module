@@ -13,5 +13,6 @@ Continuous Delivery - Once our code is integrated, we want to ensure it's always
 
 ### Overview and Why we need CI/CD
 
+<img width="711" height="184" alt="image" src="https://github.com/user-attachments/assets/72968cd0-7c51-4de8-8244-fbc6af3b4f3f" />
 
 
