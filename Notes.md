@@ -87,8 +87,30 @@ You can go back and forth between these stages. For example, you might find an e
 
 To summarize, you have your source control where you manage and store code. Then you have CI/CD where you automate integration, testing, and deployment of code. And then you have the monitoring and logging. This ensures the applications run smoothly.
 
+## GitHub Actions
 
+### Github Actions & CI/CD Workflow
 
+<img width="481" height="281" alt="image" src="https://github.com/user-attachments/assets/b7b79661-335b-4536-a2bf-c99959b1db2b" />
+
+First, you have your code. Everything starts with writing the code. You have your code, developers write new features or fix bugs and make changes to the code base. Then, you commit it.
+
+Once changes are ready, the developers commit the code to a repository. This is where GitHub Actions kicks in.
+
+You have your GitHub Actions workflow. The committed code triggers a GitHub Actions workflow. This workflow now is defined in a YAML file. It specifies what actions to take when certain events, like commit, occur. Then, you have the pipeline itself. The workflow enters the CI pipeline. Now, here's what happens step by step.
+
+You have the build. The first step is to build your code. Now, this involves compiling the code and resolving dependencies to ensure everything is set up correctly. Next, you have some automated tests. Now, these tests essentially verify that the new code doesn't break anything, and any existing functionality is not also broken. And also, new features are working as expected. This step is crucial for maintaining code quality. The test outcome is checked. If the test passes, the workflow moves on to the next step. If they fail, the process stops and developers are notified to fix any issues.
+
+Then, if the build and tests are both successful, the code is packaged. Now, this usually means that it creates a new deployment version of the product or your application, whether it's a Docker image or a compiled binary. Then, your code is packaged and then deployed. This can be to a staging, a testing environment, or even production, depending on the workflow steps. Once your code is pushed to production, you want to monitor it. Continuous monitoring ensures your application is running smoothly and any issues are quickly addressed.
+
+### Use cases for Github Actions
+Continuous integration -  GitHub Actions can automatically build and test your code every time you push changes to your repository. Now, this ensures that your code is always in a good state and any issues are caught early.
+
+For example, you have a code running unit tests on every pull request. That ensures that any new code doesn't break existing functionality and maintains the quality of your code base.
+
+Continuous deployment - After your code passes all tests, GitHub Actions can automatically deploy to production or any other environment. Now, this speeds up the release process and reduces manual intervention. An example of this would be deploying a web application to a cloud service like AWS, Azure, or GCP. Now, this can be set to happen automatically after all tests pass, ensuring quick and reliable releases.
+
+Automation - GitHub Actions can automate repetitive tasks in your workflow, freeing up time for more important work. Now, a real example would be managing project board automation. For instance, moving cards or tasks between columns on a GitHub project board based on issues or pull requests. Now, this helps keep your project board up to date without manual effort.
 
 
 
