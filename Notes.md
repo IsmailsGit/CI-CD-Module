@@ -112,12 +112,27 @@ Continuous deployment - After your code passes all tests, GitHub Actions can aut
 
 Automation - GitHub Actions can automate repetitive tasks in your workflow, freeing up time for more important work. Now, a real example would be managing project board automation. For instance, moving cards or tasks between columns on a GitHub project board based on issues or pull requests. Now, this helps keep your project board up to date without manual effort.
 
+## Writing YAML
+YAML stands for YAML Ain't Markup Language.
+
+YAML is the language of DevOps. Without YAML, a lot of things like Kubernetes, CICD and much more we cannot do without DevOps.
+
+Yaml is essentially a human-readable data serialization standard that is often used for configuration of files. That is basically what it is.
+
+3 concepts of YAML
+
+<img width="237" height="93" alt="image" src="https://github.com/user-attachments/assets/6bf22f13-44ae-4356-a0c3-bddf7e0db6a4" />
+
+First is Key-Value Pairs. This is the fundamental of YAML. Now this is the basic building block, the Key-Value Pair. You have the key and you have the value. Simple as, you can create, for example, name and then you put your name there, your surname and then you have your age, put your age there. That's what Key-Value is. That's what is supporting YAML.
 
 
+<img width="213" height="135" alt="image" src="https://github.com/user-attachments/assets/d88850bd-5d8f-418c-8efa-d228e36d22fb" />
 
+Second is Lists essentially what they are, are sequences of items. So lists are defined using a dash followed by a space and then a certain list item.
 
+<img width="218" height="109" alt="image" src="https://github.com/user-attachments/assets/d6bc3c88-8d26-4fa0-9584-5ea9c598d4cb" />
 
-
+Third is Nested data structures, one of the most powerful features of YAML is its ability to represent nested data structures. You can nest elements by using indentation, as you can see, two spaces. You can have the parent, then you have the child which is nested, and then the key value. That's simply what YAML is.
 
 
 
