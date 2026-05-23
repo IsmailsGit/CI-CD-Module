@@ -134,5 +134,15 @@ Second is Lists essentially what they are, are sequences of items. So lists are 
 
 Third is Nested data structures, one of the most powerful features of YAML is its ability to represent nested data structures. You can nest elements by using indentation, as you can see, two spaces. You can have the parent, then you have the child which is nested, and then the key value. That's simply what YAML is.
 
+## Pipelines
+
+
+
+
+
+
+
+
+
 
 
