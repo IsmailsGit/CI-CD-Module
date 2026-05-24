@@ -180,12 +180,29 @@ How to manage Secrets in Github Actions
 
 <img width="324" height="296" alt="image" src="https://github.com/user-attachments/assets/e884af31-1aec-481e-9473-0692c1123b96" />
 
+
 <img width="439" height="302" alt="image" src="https://github.com/user-attachments/assets/e935b3ab-640e-4753-a8c5-4a71b72111fc" />
 
+### Reusable CI/CD
+Customs Actions
 
+What are Customs Actions?
 
+They're reusable units of code that automate specific tasks in your CI/CD pipeline. Now there are three types of actions. You have JavaScript actions; these are actions that use Node.js to run JavaScript code. Then you have Docker actions; yes, they're in containers. And then you have composite actions, which are pieces that are reusable.
 
+How to create a Custom Action
 
+<img width="244" height="178" alt="image" src="https://github.com/user-attachments/assets/5803444c-e46c-4619-8d69-aa7b15326c7a" />
+
+Sharing and reusing Custom Actions in different projects
+
+<img width="254" height="253" alt="image" src="https://github.com/user-attachments/assets/4879faa5-9ab1-448e-a9be-8360eb12e4ae" />
+
+Benefits of Reusable Actions
+
+Consistency - Using reusable actions helps maintain consistency across different repositories like we said. By standardizing your CI/CD process, you ensure that all your projects follow the same steps and quality checks. This reduces the likelihood of errors and makes sure your workflows are more predictable.
+
+Efficiency - Reusable actions save a lot of time and effort. Instead of writing the same code for each project or the same pipeline, you can create an action once and reuse it whenever needed. 
 
 
 
