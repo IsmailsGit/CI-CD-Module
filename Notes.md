@@ -152,11 +152,22 @@ Then you have the steps. Jobs are composed of steps. Now steps are individual ta
 
 GitHub workflows has a marketplace of reusable and community created actions. Some are by GitHub themselves and some are by other organizations like AWS and more. Now this specific action pulls the latest code from your repo so that subsequent steps can work with it. And you have more examples like setup node, npm install, npm tests. These are just some examples that you can have in your steps.
 
+### Advanced Github Actions
+Using Conditions and Expressions
 
+<img width="565" height="243" alt="image" src="https://github.com/user-attachments/assets/ab516844-8760-45fd-b897-f7f3f7ac2f06" />
 
+Conditions - Allow you to control when a job or step should run based on certain criteria.
 
+Expressions - Provide a way to perform calculations, manipulate strings and more within your workflow file.
 
+Matrix builds and Parallel testing
 
+<img width="418" height="407" alt="image" src="https://github.com/user-attachments/assets/c2dfe1bb-62cc-49bd-8374-06c8ec3cc4a3" />
+
+Matrix builds - Allows you to run multiple job configurations in parallel.
+
+Useful for testing across different environments e.g. python versions and operating systems.
 
 
 
