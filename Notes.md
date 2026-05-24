@@ -135,6 +135,25 @@ Second is Lists essentially what they are, are sequences of items. So lists are 
 Third is Nested data structures, one of the most powerful features of YAML is its ability to represent nested data structures. You can nest elements by using indentation, as you can see, two spaces. You can have the parent, then you have the child which is nested, and then the key value. That's simply what YAML is.
 
 ## Pipelines
+ ### Workflow syntax and structure
+First, before anything, you must have a workflow file. Now, this workflow file is defined in a YAML file and is usually located in the .github slash workflows. Any workflow that you have, cia.yaml, main.yaml, is triggered by GitHub as a pipeline.
+
+<img width="656" height="359" alt="image" src="https://github.com/user-attachments/assets/049c35f3-b611-461c-b3db-21502ab26d8f" />
+
+First, you have the name field. Now the name is quite arbitrary. It's simply the name of your workflow. It's the label that helps you identify what this workflow does. Just the name. That's it.
+
+Then you have the trigger. So in this case, it will say on trigger on what occasion, whether it's a push, a pull request, or a schedule like a cron job. This defines the events that will trigger the workflow. In this case, we have on push. This means that our workflow will run every time there is a push to a repository. That means they get push. You can have a pull request. That means if you have a pull request that is merged, it will trigger it or not, or a schedule, whether it's a cron job or not.
+
+Then you have the jobs. Now the jobs are basically a series of tasks that run as part of the workflow. Each job runs in its own virtual environment and can be configured to run on different operating systems. In our example, we have a single job named build.
+
+You have the runs on. Within each job, you specify the environment using runs on. Now this tells GitHub actions what operating system to use for the job. Here we're using the latest version of Ubuntu, a Unix machine. We can also have a Windows OS or even Mac OS. We can also have a workflow or pipeline to run in a container if you wanted to. By default, GitHub actions users commonly use OSs like Ubuntu.
+ 
+Then you have the steps. Jobs are composed of steps. Now steps are individual tasks that run in a sequence. Each step can either run a command or use an action. Now actions are reusable pieces of code that can perform a variety of tasks. Now here you have the first thing. You have checkout code. Our first step uses an action to check out the code from the repository.
+
+GitHub workflows has a marketplace of reusable and community created actions. Some are by GitHub themselves and some are by other organizations like AWS and more. Now this specific action pulls the latest code from your repo so that subsequent steps can work with it. And you have more examples like setup node, npm install, npm tests. These are just some examples that you can have in your steps.
+
+
+
 
 
 
