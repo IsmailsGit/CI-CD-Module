@@ -169,6 +169,26 @@ Matrix builds - Allows you to run multiple job configurations in parallel.
 
 Useful for testing across different environments e.g. python versions and operating systems.
 
+### Securing Workflows
+Secrets & Encrypted vars
+
+What are Secrets?
+
+Secrets are sensitive pieces of information such as API keys, passwords or any credentials that you don't want to expose in your codebase.
+
+How to manage Secrets in Github Actions
+
+<img width="324" height="296" alt="image" src="https://github.com/user-attachments/assets/e884af31-1aec-481e-9473-0692c1123b96" />
+
+<img width="439" height="302" alt="image" src="https://github.com/user-attachments/assets/e935b3ab-640e-4753-a8c5-4a71b72111fc" />
+
+
+
+
+
+
+
+
 
 
 
