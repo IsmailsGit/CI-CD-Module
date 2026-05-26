@@ -226,10 +226,38 @@ This is a crucial part of the CICD process. Ensuring our code works well not jus
 Environment Types. When working in a real environment, we typically deploy to 3 or 4 environments: Development, Staging, and Production. Development is where all the dev work happens. It's like a sandbox environment where developers can test new features and bug fixes. It's often a bit messy, but that's okay because it's where experimentation happens. Then you have staging. Staging, think of it as like a dress rehearsal for production. It's a stable environment that mirrors production as closely as possible. This is where you do final testing to catch any issues that might have slipped through in development. Then production. This is the live environment where your application is accessible to users. Deployments to production should be done carefully and ideally should be automated to minimize human error.
 
 
-Deployment Strategies. There are 2 main types. There are manual ones and automated ones. The manual ones involve literally manually moving code from one environment to another. It's straightforward but prone to human error and can be time-consuming. Think of it like moving furniture by itself. Yes, it works but it's not the most efficient. Then you have automated deployments. This is where CICD really shines. Automated deployments use scripts and tools to move code between environments. It's faster, more reliable, and reduces the risk of mistakes. It's like using a conveyor belt to move things. Yes, much smoother and more efficient.
+Deployment Strategies. There are 2 main types. There are manual ones and automated ones. The manual ones involve literally manually moving code from one environment to another. It's straightforward but prone to human error and can be time-consuming. Think of it like moving furniture by itself. Yes, it works but it's not the most efficient. Then you have automated deployments. This is where CICD really shines. Automated deployments use scripts and tools to move code between environments. It's faster, more reliable, and reduces the risk of mistakes. It's like using a conveyor belt to move things, much smoother and more efficient.
 
 
 Finally, the tools we can use to manage our deployments. Now we have AWS, Azure, GCP, and much more. For example, in AWS you might have things like EC2s, Lambdas, ECS, EKS, and much more. Then you have Azure. Azure also has its own suite. It has AKS, App Service, and so much more. Same for GCP. You have things like App Engine, Kubernetes Engine, GKE, Cloud Functions, and you have even Cloud Run. These are just some of the tools that you can think about when deploying to new environments.
+
+#### Security in CI/CD
+As we automate our workflows, we need to ensure that our processes are secure to protect our code and data. Here are just some practices to keep your CICD pipeline secure.
+
+
+Make sure you secure your secrets - Secrets include information like API keys, passwords, tokens, and more. Never ever hard code these directly into your source code. Instead, use built-in functionality on GitHub, like Secrets in GitHub or any other secret management tool to store and access them securely within your workflows. This makes sure that your sensitive data is protected and not exposed in your codebase. A lot of mishaps happen with this. People generally might commit secret SSH keys by accident, and it could lead to many other big problems.
+
+Control access - Control who has access to your repositories and workflows. Implement the principle of least privilege, meaning give users only the permissions they need to perform their tasks and nothing more. Use role-based access control, yes RBAC, to manage permissions effectively. Now this minimizes and reduces the risk of unauthorized access or accidental changes that could compromise your security.
+
+Scan for any vulnerabilities - Regularly scan your code and dependencies for any vulnerabilities. Use tools like Dependabot, Snyk, or other security scanners that integrate with your CICD pipeline to automatically check for known vulnerabilities. By identifying and addressing vulnerabilities early, you reduce the risk of security breaches and ensure that your code remains secure.
+
+Audit and monitor - Make sure to audit and monitor your CICD pipelines. Keep track of who did what and when by enabling logging and auditing features. Monitor your pipelines, for any unusual or suspicious activity. Set up alerts to notify you of any potential security incidents. Regular audits help you detect and respond to security issues promptly, ensuring that your workflows remain secure over time.
+
+#### Debugging workflow failures
+It's very common for your pipelines to fail. Every developer or engineer at some point encounters debugging workflow failures. When your CI/CD pipeline fails, yes, I understand it can be frustrating. But understanding some common issues and how to solve them can make this process easier.
+
+Dependency errors. This is quite frequent. These occur when your project relies on external libraries or packages that have conflicts or are not installed correctly.
+
+Config errors. Config errors could happen when there are issues in your syntax. Like in your pipeline, your YAML file could have actual syntax errors. It could be that you might have missed a space, an indentation, a line, or even a spelling error. Double-check these.
+
+And finally, permission issues. Permission issues happen, for example, when you don't have the correct permission in a repository to perform certain actions like accessing secrets or writing to certain directories.
+
+Some common solutions could be reviewing logs. The first step in troubleshooting is to always review logs. Logs give you more detailed information about what went wrong and can often point you directly to the issue.
+
+Rerun jobs. Sometimes the issue might be a transient one. That means rerunning the job can help determine if the failure was a fluke or a consistent problem. So run it again and see what happens.
+
+Update dependencies. Ensure all dependencies are up to date. This can solve conflicts and compatibility issues. Always double-check your configuration files for any syntax errors or incorrect settings. Make sure all environment variables and secrets are also correctly set. These are just some, but there could be much more.
+
 
 
 
