@@ -205,7 +205,8 @@ Consistency - Using reusable actions helps maintain consistency across different
 Efficiency - Reusable actions save a lot of time and effort. Instead of writing the same code for each project or the same pipeline, you can create an action once and reuse it whenever needed. 
 
 ### CI/CD in the real-world
-Automated testing and Linting
+
+#### Automated testing and Linting
 
 Linting essentially is a process of analyzing your code, potential errors, and enforcing coding standards. It's like having a spell checker for your code. Like we said, it involves scanning code for any syntax errors, bugs, and deviations.
 
@@ -219,7 +220,16 @@ Tools for Linting - For example, in JavaScript you have ESLint which helps you f
 
 Tools for Automated testing - For automated testing you have things like JUnit and PyTest. So great for Java and Python projects and JavaScript and so on. They allow you to run and write tests for your code. And then you have Jest and Mocha. These are popular for JavaScript. These tools once again help you write and run tests for your JavaScript code.
 
+#### Deploying to different environments
+This is a crucial part of the CICD process. Ensuring our code works well not just on our local machines, but in various real-world scenarios. Let's break it down to 3 main areas. Environment Types, Deployment Strategies, and Tools.
 
+Environment Types. When working in a real environment, we typically deploy to 3 or 4 environments: Development, Staging, and Production. Development is where all the dev work happens. It's like a sandbox environment where developers can test new features and bug fixes. It's often a bit messy, but that's okay because it's where experimentation happens. Then you have staging. Staging, think of it as like a dress rehearsal for production. It's a stable environment that mirrors production as closely as possible. This is where you do final testing to catch any issues that might have slipped through in development. Then production. This is the live environment where your application is accessible to users. Deployments to production should be done carefully and ideally should be automated to minimize human error.
+
+
+Deployment Strategies. There are 2 main types. There are manual ones and automated ones. The manual ones involve literally manually moving code from one environment to another. It's straightforward but prone to human error and can be time-consuming. Think of it like moving furniture by itself. Yes, it works but it's not the most efficient. Then you have automated deployments. This is where CICD really shines. Automated deployments use scripts and tools to move code between environments. It's faster, more reliable, and reduces the risk of mistakes. It's like using a conveyor belt to move things. Yes, much smoother and more efficient.
+
+
+Finally, the tools we can use to manage our deployments. Now we have AWS, Azure, GCP, and much more. For example, in AWS you might have things like EC2s, Lambdas, ECS, EKS, and much more. Then you have Azure. Azure also has its own suite. It has AKS, App Service, and so much more. Same for GCP. You have things like App Engine, Kubernetes Engine, GKE, Cloud Functions, and you have even Cloud Run. These are just some of the tools that you can think about when deploying to new environments.
 
 
 
