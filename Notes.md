@@ -204,7 +204,20 @@ Consistency - Using reusable actions helps maintain consistency across different
 
 Efficiency - Reusable actions save a lot of time and effort. Instead of writing the same code for each project or the same pipeline, you can create an action once and reuse it whenever needed. 
 
+### CI/CD in the real-world
+Automated testing and Linting
 
+Linting essentially is a process of analyzing your code, potential errors, and enforcing coding standards. It's like having a spell checker for your code. Like we said, it involves scanning code for any syntax errors, bugs, and deviations.
+
+Automated testing is essentially the practice of running tests on your codebase automatically to ensure it works as expected. It involves writing test cases that verify different parts of your code and running these tests automatically every time you make changes to the code.
+
+The benefits of Linting first is that you maintain code quality. It ensures your code adheres to the coding standards, making it easier to read and maintain, as well as catching any syntax errors. Linting helps you catch any syntax errors before they become bigger problems.
+
+The benefits for automated testing is that 1. You can find any issues early. Automated tests help you catch bugs and issues early in the dev process. And finally, you can ensure code quality by consistently running tests. You ensure that your code remains reliable and performs as expected.
+
+Tools for Linting - For example, in JavaScript you have ESLint which helps you find and fix problems in your JavaScript code. And you have Pylint, perfect for Python projects.
+
+Tools for Automated testing - For automated testing you have things like JUnit and PyTest. So great for Java and Python projects and JavaScript and so on. They allow you to run and write tests for your code. And then you have Jest and Mocha. These are popular for JavaScript. These tools once again help you write and run tests for your JavaScript code.
 
 
 
