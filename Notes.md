@@ -258,6 +258,24 @@ Rerun jobs. Sometimes the issue might be a transient one. That means rerunning t
 
 Update dependencies. Ensure all dependencies are up to date. This can solve conflicts and compatibility issues. Always double-check your configuration files for any syntax errors or incorrect settings. Make sure all environment variables and secrets are also correctly set. These are just some, but there could be much more.
 
+#### Manual Triggers and Github actions
+Manual triggers allow workflows to be started manually via the GitHub Actions UI.
+ 
+ <img width="254" height="248" alt="image" src="https://github.com/user-attachments/assets/6509800f-d07c-45c0-9bcf-7b10668e39d6" />
+
+You have the name of the workflow and the push condition. Here you specify the workflow dispatch. Inside here you put the input of what you want the users to actually input before triggering the workflow.
+
+Why is it actually used?
+
+It has certain use cases. Firstly, for certain deployments. If you want to trigger deployments to various environments like staging, prod at different times, then you might want to use this. For maintenance jobs, like you want to run data migration or database backup and so on, you have this. And even on-demand jobs.
+
+
+
+
+
+
+
+
 
 
 
