@@ -1,52 +1,52 @@
-# name: CoderCo CICD workflow
+name: CoderCo CICD workflow
 
-# on: [push] 
-
-
-# jobs: 
-#   build: 
-#     runs-on: ubuntu-latest
-#     steps:
-#     - name: checkout code
-#       uses: actions/checkout@v2
-#     - name: We are testing this workflow
-#       run: echo Hello everyone!
+on: [pull] 
 
 
+jobs: 
+  build: 
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout code
+      uses: actions/checkout@v2
+    - name: We are testing this workflow
+      run: echo Hello everyone!
 
-# name: CoderCo Combined 
-
-# on: [push]
 
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
+name: CoderCo Combined 
 
-#     strategy:
-#       matrix:
-#         python-version: ["3.8", "3.9", "3.10"]
+on: [push]
 
-#     steps:
-#     - name: checkout code
-#       uses: actions/checkout@v2
 
-#     - name: setup python
-#       uses: actions/setup-python@v2
-#       with:
-#         python-version: ${{ matrix.python-version}}
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-#     - name: install dependencies 
-#       run: | 
-#         cd chapter4
-#         python -m pip install --upgrade pip
-#         if [-f require,emts.txt ]; then pip install -r requirements.txt; fi
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
 
-#     - name: run tests
-#       run: |
-#         cd chapter4
-#         python -m unittest discover
+    steps:
+    - name: checkout code
+      uses: actions/checkout@v2
+
+    - name: setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version}}
+
+    - name: install dependencies 
+      run: | 
+        cd chapter4
+        python -m pip install --upgrade pip
+        if [-f require,emts.txt ]; then pip install -r requirements.txt; fi
+
+    - name: run tests
+      run: |
+        cd chapter4
+        python -m unittest discover
     
-#     - name: notify us of success
-#       run: echo "Tests passed on Python ${{ matrix.python-version}}"
-#       if: success()
+    - name: notify us of success
+      run: echo "Tests passed on Python ${{ matrix.python-version}}"
+      if: success()
