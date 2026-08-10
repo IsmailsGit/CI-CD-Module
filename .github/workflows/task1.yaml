@@ -1,8 +1,9 @@
 name: Task-1 Terraform Linting and Validating Pipeline
 
-on: [push] #it checks immediately after I push, before the code is considered safe to merge or deploy
-  paths:
-    - 'Task-1/**' # Only runs this workflow when something inside the Task-1 directory changes.
+on: 
+  push: #it checks immediately after I push, before the code is considered safe to merge or deploy
+    paths:
+      - 'Task-1/**' # Only runs this workflow when something inside the Task-1 directory changes.
 # '**' means anything inside Task-1, including files in subdirectories.
 jobs:
   lint-and-validate: # Single job because all checks use the same environment
