@@ -32,4 +32,5 @@ jobs:
         uses: terraform-linters/setup-tflint@v6.0.0
 
       - name: Terraform Lint 
-        run: tflint
+        run: tflint 
+        #
