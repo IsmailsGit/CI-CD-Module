@@ -32,5 +32,5 @@ jobs:
         uses: terraform-linters/setup-tflint@v6.0.0
 
       - name: Terraform Lint 
-        run: tflint 
+        run: tflint # tflint checks to see if my terraform code is in line with terraform code best practices, so that also means that just because tflint picks up an error that doesn't necessarily mean it doesn't work.
         #
