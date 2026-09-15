@@ -13,3 +13,4 @@ if  __name__ == '__main__':
 
 # Run first create an image docker build -t hello-flask .
 # Then build the container from that image 
+# docker run -d -p 5002:5002 hello-flask   

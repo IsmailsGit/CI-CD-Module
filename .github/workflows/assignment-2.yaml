@@ -18,3 +18,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4  # Downloads repository contents to the runner
+
+      - name: Build Docker Image
+        id: buildAndPushImage 
+        uses: ismailsdocker1/ismailsdocker1/assignment-2:v1.0
+        with:
+          registry_url: 'docker.io'
+          repository_name: 'ismailsdocker1/assignment-2'
+          user_name: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+          image_version: 'v1.0'
+          docker_file: '.' 
+      - name: Get pre step result output image_pull_url
+        run: echo "The time was ${{ steps.buildAndPushImage.outputs.image_pull_url }}"
