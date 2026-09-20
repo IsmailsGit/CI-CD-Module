@@ -21,7 +21,7 @@ jobs:
 
       - name: Build Docker Image
         id: buildAndPushImage 
-        uses: ismailsdocker1/assignment-2:v1.0
+        uses: docker/ismailsdocker1/assignment-2:v1.0
         with:
           registry_url: 'docker.io'
           repository_name: 'ismailsdocker1/assignment-2'
