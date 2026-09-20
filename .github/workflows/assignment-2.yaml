@@ -10,9 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest # Fresh Ubuntu runner
 
-    defaults:
-      run: 
-        working-directory: Assignment-2
+    # defaults:
+    #   run: 
+    #     working-directory: Assignment-2
 
 
     steps:
