@@ -10,9 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest # Fresh Ubuntu runner
 
-    # defaults:
-    #   run: 
-    #     working-directory: Assignment-2
+    defaults:
+      run: 
+        working-directory: Assignment-2
 
 
     steps:
@@ -23,7 +23,7 @@ jobs:
         id: buildAndPushImage 
         uses: dockerhub/ismailsdocker1/assignment-2:1.0
         with:
-          registry_url: 'docker.io'
+          registry_url: 'https://hub.docker.com/repositories/ismailsdocker1'
           repository_name: 'ismailsdocker1/assignment-2'
           user_name: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
